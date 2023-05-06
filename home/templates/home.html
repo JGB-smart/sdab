@@ -46,10 +46,10 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="active" href="{% url 'home' %}">Inicio</a></li>
-          <li><a href="about.html">Acerca de</a></li>
-          <li><a href="courses.html">Cursos</a></li>
-          <li><a href="trainers.html">Profesores</a></li>
-          <li><a href="events.html">Evaluaciones</a></li>
+          <li><a href="{% url 'about' %}">Acerca de</a></li>
+          <li><a href="{% url 'cursos' %}">Cursos</a></li>
+          <li><a href="{% url 'profesores' %}">Profesores</a></li>
+          <li><a href="{% url 'evaluaciones' %}">Evaluaciones</a></li>
 
           <li class="dropdown"><a href="#"><span>Contenidos</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -77,6 +77,8 @@
 
     </div>
   </header><!-- End Header -->
+
+  {% block content %}
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
@@ -126,22 +128,22 @@
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Students</p>
+            <p>Estudiantes</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Courses</p>
+            <p>Cursos</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Events</p>
+            <p>Eventos</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Trainers</p>
+            <p>Profesores</p>
           </div>
 
         </div>
@@ -442,6 +444,8 @@
     </section><!-- End Trainers Section -->
 
   </main><!-- End #main -->
+
+  {% endblock %}
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
