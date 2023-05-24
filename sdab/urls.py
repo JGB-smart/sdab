@@ -23,12 +23,12 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', include('login.urls')),
+    path('login/', include('login.urls')),
     path('', include('home.urls')),
-    path('', include('cursos.urls')),
-    path('', include('profesores.urls')),
-    path('', include('evaluaciones.urls')),
-    path('', include('contenidos.urls')),
+    path('cursos/', include('cursos.urls')),
+    path('profesores/', include('profesores.urls')),
+    path('evaluaciones/', include('evaluaciones.urls')),
+    path('contenidos/', include('contenidos.urls')),
     
 ]
 

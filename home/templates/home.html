@@ -47,10 +47,11 @@
         <ul>
           <li><a class="active" href="{% url 'home' %}">Inicio</a></li>
           <li><a href="{% url 'about' %}">Acerca de</a></li>
-          <li><a href="{% url 'cursos' %}">Cursos</a></li>
-          <li><a href="{% url 'profesores' %}">Profesores</a></li>
-          <li><a href="{% url 'evaluaciones' %}">Evaluaciones</a></li>
-
+          {% if request.user.is_authenticated %}
+            <li><a href="{% url 'cursos' %}">Cursos</a></li>
+            <li><a href="{% url 'profesores' %}">Profesores</a></li>
+            <li><a href="{% url 'evaluaciones' %}">Evaluaciones</a></li>
+          {% endif %}
           <li class="dropdown"><a href="#"><span>Contenidos</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{% url 'introduccion' %}">Introducción</a></li>
@@ -68,7 +69,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Iniciar</a></li>
+          <li><a href="{% url 'login' %}">Iniciar</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -83,9 +84,15 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Aprende hoy,<br>AND Aprende fácil</h1>
-      <h2>Convierte a tu aprendizaje en true</h2>
-      <a href="courses.html" class="btn-get-started">COMENZAR</a>
+      {% if request.user.is_authenticated %}
+      <h1>Bienvenido, {{request.user.username }}<br>mantente 1 con sdab ;)</h1>
+      <h2>Tú aprendizaje ya es true</h2>
+        {% else %}
+          <h1>Aprende hoy,<br>AND Aprende fácil</h1>
+          <h2>Convierte a tu aprendizaje en true</h2>
+          <a href="{% url 'login' %}" class="btn-get-started">COMENZAR</a>
+        {% endif %}
+
     </div>
   </section><!-- End Hero -->
 
