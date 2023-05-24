@@ -16,12 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('login.urls')),
     path('', include('home.urls')),
     path('', include('cursos.urls')),
     path('', include('profesores.urls')),
     path('', include('evaluaciones.urls')),
     path('', include('contenidos.urls')),
+    
 ]
+
+# Para hacer funcionar los archivos media en la subida de imagenes
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
