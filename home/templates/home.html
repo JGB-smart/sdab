@@ -69,12 +69,24 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a href="{% url 'login' %}">Iniciar</a></li>
+          {% if request.user.is_authenticated %}
+          <li class="dropdown"><a href="#"><span>Cuenta</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'logout' %}">Salir</a></li>
+            </ul>
+          {% else %}
+            <li><a href="{% url 'login' %}">Iniciar</a></li>
+          {% endif %}
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="courses.html" class="get-started-btn">Registrarse</a>
+      {% if request.user.is_authenticated %}
+
+      {% else %}
+        <a href="courses.html" class="get-started-btn">Registrarse</a>
+      {% endif %}
+      
 
     </div>
   </header><!-- End Header -->
