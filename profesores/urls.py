@@ -3,5 +3,6 @@ from profesores import views
 
 
 urlpatterns = [
-       path('profesores/', views.profesores, name='profesores'),
+       path('lista_profesores/', views.ListadoProfesores.as_view(), name='lista_profesores'),
+       # path('profesores/', views.profesores, name='profesores'),
 ]
