@@ -48,7 +48,7 @@
           <li><a class="active" href="{% url 'home' %}">Inicio</a></li>
           <li><a href="{% url 'about' %}">Acerca de</a></li>
           {% if request.user.is_authenticated %}
-            <li><a href="#">Eventos</a></li>
+            <li><a href="{% url 'lista_eventos' %}">Eventos</a></li>
             <li><a href="{% url 'lista_cursos' %}">Cursos</a></li>
             <li><a href="{% url 'lista_profesores' %}">Profesores</a></li>
             <li><a href="{% url 'evaluaciones' %}">Evaluaciones</a></li>
