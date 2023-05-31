@@ -15,53 +15,46 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Trainers Section ======= -->
-    <section id="trainers" class="trainers">
-      <div class="container" data-aos="fade-up">
-        <div class="row" data-aos="zoom-in" data-aos-delay="100"></div>
-
-          {% if profesores %}  
-          <div class="d-flex align-items-stretch">
-
-         
-            {% for profesor in profesores %}
+        <!-- ======= Trainers Section ======= -->
+        <section id="trainers" class="trainers">
+          <div class="container" data-aos="fade-up">
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+              
                 
-                
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="member">
-                      <img src="{% static 'assets/img/trainers/trainer-1.jpg' %}" class="img-fluid" alt="">
-                      <div class="member-content">
-                        <h4>{{ profesor.nombre }} {{profesor.apellido}}</h4>
-                        <span>{{ profesor.materia }}</span>
-                        <p>
-                          Descripción del docente
-                        </p>
-                        <div class="social">
-                          <a href=""><i class="bi bi-twitter"></i></a>
-                          <a href=""><i class="bi bi-facebook"></i></a>
-                          <a href=""><i class="bi bi-instagram"></i></a>
-                          <a href=""><i class="bi bi-linkedin"></i></a>
+                {% if profesores %}         
+                  {% for profesor in profesores %}                
+                      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="member">
+                          <img src="{% static 'assets/img/trainers/trainer-1.jpg' %}" class="img-fluid" alt="">
+                          <div class="member-content">
+                            <h4>{{ profesor.nombre }} {{ profesor.apellido }}</h4>
+                            <span>{{ profesor.materia }}</span>
+                            <p>
+                              Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                            </p>
+                            <div class="social">
+                              <a href=""><i class="bi bi-twitter"></i></a>
+                              <a href=""><i class="bi bi-facebook"></i></a>
+                              <a href=""><i class="bi bi-instagram"></i></a>
+                              <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-          
-            {% endfor %}
+                  {% endfor %}
+              {% else %}
+              <br>
+              <div class="text-center">          
+                <h3>No hay profesores disponibles...</h3>
+              </div>
+              {% endif %}  
 
-            
+
+    
+            </div>
+    
           </div>
-          {% else %}
-          <br>
-          <div class="text-center">          
-            <h3>No hay profesores disponibles...</h3>
-          </div>
-          {% endif %}  
-
-
-
-        </div>
-      </div>
-    </section><!-- End Trainers Section -->
+        </section><!-- End Trainers Section -->
 
   </main><!-- End #main -->
 

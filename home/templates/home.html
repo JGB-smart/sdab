@@ -85,7 +85,7 @@
       {% if request.user.is_authenticated %}
 
       {% else %}
-        <a href="courses.html" class="get-started-btn">Registrarse</a>
+        <a href="{% url 'registro_usuarios' %}" class="get-started-btn">Registrarse</a>
       {% endif %}
       
 
