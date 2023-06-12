@@ -1,0 +1,232 @@
+{% extends "home.html"%}
+{% load static %}
+{% block title %} FUNDAMENTOS {% endblock %}
+{% block content %}
+
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>FUNDAMENTOS DEL ALGEBRA BOOLEANA</h2>
+        <!-- <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p> -->
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Postulados Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <br><br><br><br><br><br><br><br>
+            <img src="{% static 'img/postulado1.jpg' %}" class="img-fluid" alt="">
+            <br><br><br>
+            <img src="{% static 'img/postulado2.jpg' %}" class="img-fluid" alt="">
+            <br><br><br>
+            <img src="{% static 'img/postulado3.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Postulados Booleanos</h3> <br>
+            <p class="fst-italic">
+                Existen teoremas que rigen las leyes lógicas estructurales del álgebra booleana.
+                De igual forma se tienen postulados para conocer los resultados posibles en diferentes
+                combinaciones de variables binarias, según la operación que se realice. Estos son útiles para minimizar las funciones booleanas. Ejemplo: <br><br>
+                Considere los números binarios 0 y 1, la variable booleana (x) y su complemento (x '). La  variable  booleana  o  su  complemento  se  conoce  como literal .
+                Las cuatro operaciones lógicas O posibles entre estos literales y números binarios se muestran a continuación. <br><br>
+                1) x + 0 = x <br>
+                2) x + 1 = 1 <br>
+                3) x + x = x <br>
+                4) x + x '= 1 <br><br>
+                Del  mismo  modo,  a continuación,  se  muestran las  cuatro operaciones lógicas Y posibles entre esos literales y números binarios. <br><br>
+                1) x.1 = x <br>
+                2) x.0 = 0 <br>
+                3) x.x = x <br>
+                4) x.x '= 0 <br><br>
+                Estos son los simples postulados booleanos. Podemos verificar estos postulados fácilmente, sustituyendo la variable booleana por '0' o '1'. <br>
+                <b>Nota:</b>El complemento del complemento de cualquier variable booleana es igual a la variable en sí. Es decir, (x ')' = x. 
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+      
+    <!-- ======= Leyes Section ======= -->
+        <section id="about" class="about">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="row">
+              <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                <br><br>
+                <img src="{% static 'img/ley1ejem.jpg' %}" class="img-fluid" alt="">
+                <br>
+                <img src="{% static 'img/ley1ejem2.jpg' %}" class="img-fluid" alt="">
+
+                <hr>
+                <img src="{% static 'img/ley2ejem.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'img/ley2ejem2.jpg' %}" class="img-fluid" alt="">
+                <hr>
+                <img src="{% static 'img/ley2ejem.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h3>Leyes Booleanas</h3><br>
+                <h4>Ley conmutativa</h4>
+                <p class="fst-italic">
+                  Si cualquier operación lógica  de  dos variables booleanas da  el mismo  resultado independientemente  del  orden  de  esas  dos  variables,
+                  entonces  esa  operación lógica se dice que es conmutativa . Las operaciones lógicas OR y lógicas AND de dos variables booleanas x & y se
+                  muestran a continuación <br><br>
+                  1) x + y = y + x <br>
+                  2) xy = yx <br> <br>
+                  El símbolo '+' indica una operación OR lógica. Del mismo modo, el símbolo '.' Indica una  operación  AND  lógica  y  es  opcional  para
+                  representar. La  ley  conmutativa obedece a las operaciones lógicas.  <br> 
+                </p>
+                <h4>Ley Asociativa</h4>
+                <p class="fst-italic">
+                  Si  primero  se  realiza  una  operación  lógica  de  cualquiera  de  las  dos  variables booleanas  y  luego  se  realiza  la  misma
+                  operación  con  la  variable  restante  da  el mismo  resultado,  entonces  se  dice  que  la  operación  lógica  es asociativa.
+                  Las operaciones  lógicas  OR  y  lógicas  AND  de  tres  variables  booleanas  x,  y  &  z  se muestran a continuación. <br><br>
+                  1) x + (y + z) = (x + y) + z  <br>
+                  2) x. (yz) = (xy) .z  <br> <br>
+                  La ley asociativa obedece a las operaciones lógicas OR y operaciones AND.<br> 
+                </p>
+                <h4>Ley Distributiva</h4>
+                <p class="fst-italic">
+                  Si cualquier operación lógica se puede distribuir a todos los términos presentes en la función booleana, entonces se dice que esa operación
+                  lógica es Distributiva . La distribución  de  las  operaciones  lógicas  OR  y  lógicas  AND  de  tres  variables booleanas x, y & z se
+                  muestra a continuación. <br><br>
+                  1) x. (y + z) = xy + xz  <br>
+                  2) x + (yz) = (x + y). (x + z) <br> <br>
+                  La ley asociativa obedece a las operaciones lógicas OR y operaciones AND.<br> 
+                </p>
+              </div>
+            </div>
+    
+          </div>
+        </section><!-- End About Section -->
+
+          <!-- ======= Teoremas Section ======= -->
+            <section id="about" class="about">
+              <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                  <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                    <img src="{% static 'img/teorema1ejem.jpg' %}" class="img-fluid" alt=""> <br><br>
+                    <hr>
+                    <img src="{% static 'img/teorema2ejem.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                    <h3>Teoremas Booleanos</h3><br>
+                    <h4>Teorema de la Dualidad</h4>
+                    <p class="fst-italic">
+                      Este  teorema  establece  que  el doble de  la  función  booleana  se  obtiene  al intercambiar el operador lógico AND con el operador lógico
+                      OR y los ceros con los unos. Para cada función booleana, habrá una función dual correspondiente.La siguiente tabla da ejemplo basico de dualidad. <br><br>
+
+                      En cada fila, hay dos ecuaciones booleanas y son duales entre sí. Podemos verificar todas  estas  ecuaciones  booleanas  de la  suma  y el  producto
+                      usando el  teorema  de dualidad
+                    </p>
+                    <h4>Teorema de Morgan</h4>
+                    <p class="fst-italic">
+                      Este  teorema  es  útil  para  encontrar  el complemento  de  la  función booleana. Indica  que  el  complemento  de  OR  lógico  de  al  menos  dos  variables
+                      booleanas es igual al AND lógico de cada variable complementada. El teorema de DeMorgan con 2 variables booleanas x e y puede representarse como: <br><br>
+                      1) (x + y) '= x'.y'  <br>
+                      2) (xy) '= x' + y ' <br> <br>
+                      Por lo tanto, el complemento de AND lógico de dos variables booleanas es igual al OR lógico de cada variable complementada. De manera similar, podemos
+                      aplicar el teorema de DeMorgan para más de 2 variables booleanas también.<br> 
+                    </p>
+                  </div>
+                </div>
+        
+              </div>
+            </section><!-- End About Section -->
+
+
+    <!-- ======= Simplificacion Section ======= -->
+          <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+              <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                  <br><br>
+                  <img src="{% static 'img/simpliejem.jpg' %}" class="img-fluid" alt=""> <br><br>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <h3>Simplificación Booelana</h3><br>
+                  <p class="fst-italic">
+                    Al usar los teoremas y leyes booleanas, podemos simplificar las expresiones booleanas, mediante las cuales podemos reducir el número
+                    requerido de compuertas lógicas a implementar. Podemos simplificar la función Boolean utilizando dos métodos: <br> <br>
+                    1) El método algebraico: mediante el uso de identidades (leyes booleanas). <br> <br>
+                    2) El método gráfico: utilizando el método del Mapa de Karnaugh. <br> <br>
+
+                    <b>Ejemplo:</b> Se va a simplificar la siguiente expresión aplicando las leyes e identidades booleanas mencionadas:
+                  </p>
+                </div>
+              </div>
+      
+            </div>
+          </section><!-- End About Section -->            
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Tutoriales</h2>
+          <p>Material de apoyo externo</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/vOSCevaytLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/c1pVMtZre24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/XjYkI_TwWd0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/ELFVX176ad8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/bZI2gdOS3RQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+
+{% endblock %}
