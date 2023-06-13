@@ -117,7 +117,7 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/logo1.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>¿Qué es algebra booleana y para que sirve?</h3>
@@ -146,22 +146,22 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ estudiantes }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Estudiantes</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ cursos }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Cursos</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{eventos}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Eventos</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{profesores}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Profesores</p>
           </div>
 
@@ -182,7 +182,7 @@
                 En nuestro sistema De Aprendizaje Booleano, podrás aprender de manera didactica e interactiva las bases que necesitaras para comprender la lógica de circuitos, a través de los contenidos revisados y avalados por nuestro equipo de profesionales expertos en la electrónica.
               </p>
               <div class="text-center">
-                <a href="about.html" class="more-btn">Leer más <i class="bx bx-chevron-right"></i></a>
+                <a href="{% url 'about' %}" class="more-btn">Leer más <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -226,31 +226,25 @@
 
         <div class="section-title">
           <h2>Material informativo</h2>
-          <p>Sitios recomendado por SDAB</p>
+          <p>Canales recomendados por SDAB</p>
         </div>
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
+              <img src="{% static 'img/canal1.jpg' %}" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Web Development</h4>
-                  <p class="price">$169</p>
+                  <h4>Electrónica</h4>
                 </div>
 
-                <h3><a href="course-details.html">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+                <h3><a href="https://www.youtube.com/@ElectronicaFP" target="_blank" rel="noopener">Electrónica FP</a></h3>
+                <p>Soy Fernando Manso, profesor de electrónica, físico y curioso patológico. Aquí hablamos de electrónica, para todos/as…</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                    <span>Antonio</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
+                    <span>Fernando Manso</span>
                   </div>
                 </div>
               </div>
@@ -259,24 +253,18 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="course-item">
-              <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
+              <img src="{% static 'img/canal2.jpg' %}" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Marketing</h4>
-                  <p class="price">$250</p>
+                  <h4>Ingeniería</h4>
                 </div>
 
-                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+                <h3><a href="https://www.youtube.com/@Pasosporingenieria" target="_blank" rel="noopener">Pasos por ingeniería</a></h3>
+                <p>¡Hola estudiantes!aquí podrás encontrar material educativo en forma de video-clases de matemáticas e ingeniería</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
                     <span>Lana</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
                   </div>
                 </div>
               </div>
@@ -285,24 +273,18 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="course-item">
-              <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
+              <img src="{% static 'img/canal3.jpg' %}" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Content</h4>
-                  <p class="price">$180</p>
+                  <h4>Ingeniería</h4>
                 </div>
 
-                <h3><a href="course-details.html">Copywriting</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+                <h3><a href="https://www.youtube.com/@LesIngenieurs" target="_blank" rel="noopener">Les Ingenieurs</a></h3>
+                <p>Tutoriales de Ingeniería Electrónica, Eléctrica, Mecatrónica, Mecánica e Industrial y Sistemas. Y mucho más...</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
                     <span>Brandon</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
                   </div>
                 </div>
               </div>
