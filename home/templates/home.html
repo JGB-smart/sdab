@@ -67,8 +67,7 @@
               </li>
               <li><a href="{% url 'tema1' %}">Tema 1</a></li>
               <li><a href="{% url 'tema2' %}">Tema 2</a></li>
-              <li><a href="#">Tema 3</a></li>
-              <li><a href="#">Tema 4</a></li>
+              <li><a href="{% url 'tema3' %}">Tema 3</a></li>
             </ul>
           </li>
           {% if request.user.is_authenticated %}

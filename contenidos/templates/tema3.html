@@ -1,0 +1,242 @@
+{% extends "home.html"%}
+{% load static %}
+{% block title %} EXPRESIONES BOOLEANAS {% endblock %}
+{% block content %}
+
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>CIRCUITOS LÓGICOS</h2>
+        <!-- <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p> -->
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Compuertas Lógicas Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <br><br><br>
+            <img src="{% static 'img/tema3/defpuertas.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Compuertas Lógicas</h3> <br>
+            <p class="fst-italic">
+                Las compuertas lógicas son el corazón de la electrónica digital. Básicamente, todas las compuertas lógicas tienen una salida y dos entradas,
+                 algunas compuertas lógicas como la compuerta NOT o el inversor tienen solo una entrada y una salida. Las entradas de las compuertas lógicas
+                están diseñadas para recibir solo datos binarios (bajo 0 o alto 1) al recibir la señal de voltaje.
+                El nivel lógico en bajo representa cero volts y el nivel lógico en alto representa 3 o 5 volts. <br><br>
+               
+                Es posible conectar cualquier número de compuertas lógicas para diseñar un circuito digital requerido. Prácticamente, implementamos una gran
+                cantidad de compuertas lógicas en circuitos integrados, mediante las cuales podemos guardar el espacio físico ocupado por éstas. También es
+                posible realizar operaciones complicadas a altas velocidades mediante el uso de circuitos integrados (IC).               
+                Combinando compuertas lógicas, podemos diseñar muchos circuitos específicos, como flip flops, multiplexores, registros de desplazamiento, etc.
+            </p>    
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Activos Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+      
+              <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                  <img src="{% static 'img/tema3/nivel.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <h3>¿Qué es activo alto y activo bajo?</h3> <br>
+                  <p class="fst-italic">
+                    El pin bajo activo debe estar conectado a un nivel lógico bajo o a tierra. De la misma manera, el pin alto activo debe estar conectado
+                    a un nivel lógico alto como pudiera ser 5 voltios o 3.3 voltios. <br> <br>
+
+                    Comprendamos esto de una manera simple. Cuando vemos el pin de habilitación CE en un IC de registro de desplazamiento, sin ninguna línea
+                    (barra), lo conectamos a una entrada activa baja, es decir, a 0 voltios de tierra. De lo contrario, si vemos el pin de habilitación con
+                    una línea como (CE) ̅, lo conectamos a la entrada alta activa, es decir, a 3.3 o 5 voltios de suministro, para habilitar el pin.
+                  </p>    
+                </div>
+              </div>
+      
+            </div>
+          </section><!-- End About Section -->
+      
+    <!-- =======Compuertas y tablas Section ======= -->
+        <section id="about" class="about">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="row">
+              <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                <br><br>
+                <img src="{% static 'img/tema3/tablas.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h3>Compuertas lógicas y tablas de verdad</h3><br>
+                    <p class="fst-italic">
+                        Los dispositivos lógicos combinacionales son dispositivos digitales que convierten entradas binarias en salidas binarias con base
+                        en las reglas de la lógica matemática. Estos dispositivos son comúnmente conocidos como compuertas, ya que controlan el flujo de
+                        señales de las entradas a una sola salida.Es recomendable conocer las operaciones básicas del álgebra booleana. <br> <br>
+                        
+                        Cada compuerta lógica se puede representar mediante un símbolo gráfico. Como podemos observar, vamos a tratar con 8 compuertas
+                        importantes INV o NOT, AND, NAND, OR, NOR, XOR, XNOR y BUFFER o IF en las cuales se dará a conocer la operación que realiza, 
+                        la expresión con la que se puede denotar, símbolo y tabla de verdad.
+                        <br><br>
+                        Consideración:<br><br>
+                        1) Se considera un estado activo “1” (alto lógico) e inactivo “0” (bajo lógico).<br><br>
+                        2) Las entradas de las compuertas se consideran como “A” y “B”, la salida se representa con “Q”.<br><br>
+                    </p>
+              </div>
+            </div>
+
+          </div>
+        </section><!-- End About Section -->
+
+    <!-- ======= Componentes Section ======= -->
+          <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+              <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                  <br><br>
+                  <img src="{% static 'img/tema3/puertas.jpg' %}" class="img-fluid" alt=""> <br><br><br><br><br><br>
+                  <img src="{% static 'img/tema3/xornot.jpg' %}" class="img-fluid" alt=""> <br><br><br><br><br>
+                  <img src="{% static 'img/tema3/if.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <h3>Tipos de compuertas Lógicas</h3><br>
+                  <h4>Compuerta NOT o INV</h4>
+                    <p class="fst-italic">
+                        Su expresión es representada con una letra testada, para esta compuerta únicamente se cuenta
+                        con una entrada y una salida por lo tanto actúa como un inversor. Si la entrada se encuentra
+                        en estado activo “1” se tendrá a la salida un estado inactivo “0” y para el caso contrario,
+                        si la entrada se encuentra en estado inactivo “0” a la salida estará en estado activo “1”.
+                    </p>
+                    <h4>Compuerta AND</h4>
+                    <p class="fst-italic">
+                        En el Álgebra de Boole se representa por una multiplicación, por lo tanto para tener la salida
+                        en estado activo es necesario que sus entradas tengan un estado binario 1, al tener una entrada
+                        inactiva “0” su salida será 0. Es posible representarlo mediante un circuito que tenga sus 
+                        interruptores en serie, al tener todos los interruptores activos permite cerrar el circuito y 
+                        por lo tanto el flujo de la corriente.
+                    </p>
+                    <h4>Compuerta NAND</h4>
+                    <p class="fst-italic">
+                        También conocida como AND negada o inversa, es una combinación de las compuertas AND y NOT que se
+                        representa con la compuerta AND con un círculo a la salida, al tener sus entradas activas “1” la
+                        salida se encuentra inactiva “0”, otra variación con respeto a las entradas mantendrá su salida
+                        en estado activo “1”. Se puede representar mediante un circuito con dos interruptores en serie
+                        y debemos recordar que el flujo de corriente circula por donde se tenga menor resistencia.
+                    </p>
+                    <h4>Compuerta OR</h4>
+                    <p class="fst-italic">
+                        Su expresión en el Álgebra de Boole es representada por una suma. Esta compuerta se encuentra en estado
+                        activo siempre y cuando una de sus entradas tenga un estado binario activo “1”. Para lograr un estado
+                        inactivo “0” a la salida, es necesario que todas sus entradas se encuentren en estado inactivo “0”.
+                        Se puede representar mediante un circuito que tenga dos interruptores en paralelo, al accionar un
+                        interruptor permite cerrar el circuito y por lo tanto el flujo de la corriente.
+                    </p>
+                    <h4>Compuerta NOR</h4>
+                    <p class="fst-italic">
+                        Es una combinación de las compuertas OR y NOT, en otras palabras la compuerta NOR es la versión inversa de la
+                        compuerta OR. Al tener sus entradas en estado inactivo “0” su salida estará en un estado activo “1”, pero si
+                        alguna de las entradas pasa a un estado binario “1” su salida tendrá un estado inactivo “0”. Se puede representar
+                        mediante un circuito con los interruptores y salida en paralelo, para tener la salida en estado activo “1” es
+                        necesario que ambos interruptores se encuentren abiertos, mientras alguno de los interruptores se encuentre
+                        cerrado la salida “y” tendrá un estado binario “0”.
+                    </p>
+                    <h4>Compuerta XOR</h4>
+                    <p class="fst-italic">
+                        También conocida como “OR exclusiva”, su expresión Booleana es una suma binaria de un dígito cada uno y el resultado
+                        obtenido será la salida. La salida tiene un estado activo “1” al tener las entradas en estados diferentes (Una activa y otra inactiva)
+                        .Su representación es mediante cuatro interruptores que se encuentran acoplados mecánicamente a su valor negado, de este modo cuando A
+                        se cierra entonces A' se abre y viceversa, lo mismo ocurre con el interruptor B con respecto al B'.
+                    </p>
+                    <h4>Compuerta XNOR</h4>
+                    <p class="fst-italic">
+                        Es la negación de la compuerta XOR, cuando las entradas sean iguales se representará una salida en estado “1” y si son diferentes la
+                        salida será un estado “0”.
+                    </p>
+                    <h4>Compuerta IF o Buffer</h4>
+                    <p class="fst-italic">
+                        Es una de las compuertas menos utilizadas o recocidas pero a veces es necesaria, sus estados lógicos permanecen del mismo modo,
+                        se podría considerar como un cable conectado ya que lo que tenemos a la entrada se obtendrá a la salida. La función principal
+                        del buffer es aumentar la corriente suministrada a la salida mientras se retiene el estado lógico, en la práctica es utilizado
+                        para amplificar la corriente o como seguidor de tensión para adaptar impedancias.
+                    </p>
+                    
+                </div>
+              </div>
+      
+            </div>
+          </section><!-- End About Section -->
+          
+ 
+          
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Tutoriales</h2>
+          <p>Material de apoyo externo</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                    <iframe width="360" height="315" src="https://www.youtube.com/embed/2OH2ahzx6PY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                    <iframe width="360" height="315" src="https://www.youtube.com/embed/3t3Pgve1mvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                    <iframe width="360" height="315" src="https://www.youtube.com/embed/nxC1v3v46OY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                    <iframe width="360" height="315" src="https://www.youtube.com/embed/uuY4-JV_reI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                    <iframe width="360" height="315" src="https://www.youtube.com/embed/Ft61K5iL0gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+
+{% endblock %}

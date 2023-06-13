@@ -12,3 +12,7 @@ def tema1(request):
 def tema2(request):
 
     return render(request,'tema2.html')
+
+def tema3(request):
+
+    return render(request,'tema3.html')
