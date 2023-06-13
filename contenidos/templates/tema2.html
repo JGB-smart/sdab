@@ -1,0 +1,220 @@
+{% extends "home.html"%}
+{% load static %}
+{% block title %} EXPRESIONES BOOLEANAS {% endblock %}
+{% block content %}
+
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>EXPRESIONES BOOLEANAS</h2>
+        <!-- <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p> -->
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Funciones Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <br><br><br>
+            <img src="{% static 'img/tema2/funcboo.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Funciones Booleanas</h3> <br>
+            <p class="fst-italic">
+                En su forma matemática primitiva, las expresiones booleanas se representan por
+                medio de funciones. Se define una función booleana o polinomio booleano como
+                una expresión booleana de n variables, para la cual, siendo x una variable
+                booleana, una función booleana de n variables, queda denotada por
+                f (x1, x2,…, xn). <br> <br>
+                Considerando que una función booleana f es el resultado de
+                una expresión booleana de n variables x1,x2, ..., xn
+                ; y que el resultado de
+                una expresión booleana, puede asumir como valor un 0 o un 1 ; es posible
+                4
+                afirmar por medio de la deducción, que una función booleana es otra variable
+                cuyo valor puede asumir un 0 o un 1.
+            </p>    
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+      
+    <!-- =======Reducción de expresiones Section ======= -->
+        <section id="about" class="about">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="row">
+              <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                <br><br><br>
+                <img src="{% static 'img/simpliejem.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h3>Reducción de expresiones booleanas</h3><br>
+                <p class="fst-italic">
+                    A fin de reducir la complejidad de las expresiones algebraicas, se requiere un
+                    procedimiento de cinco pasos, mediante el cual se deben aplicar todas las leyes
+                    del álgebra booleana. Dicho procedimiento consiste en:
+                <br><br>
+                1) Multiplicar todas las variables a fin de remover paréntesis.<br><br>
+                2) Eliminar términos duplicados. Ej.: A BC⋅A BC = A BC <br><br>
+                3) Eliminar todo término compuesto de una variable y su negación. Ej.:
+                A B B'C+ D = AC+D .  <br><br>
+                4) Cuando haya términos que solo se diferencien por una variable, eliminar el
+                más largo de ellos. Ej.: A BC+ A B = A B <br><br>
+                5) Si dos términos son iguales y una (o más) variables se encuentra afirmada
+                en un término y negada en otro, eliminar las variables complementadas de
+                ambos términos. Ej.: A BC+ A BC = A C
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section><!-- End About Section -->
+
+    <!-- ======= Componentes Section ======= -->
+          <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+              <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                  <br><br>
+                  <img src="{% static 'img/tema2/compoejem.jpg' %}" class="img-fluid" alt=""> <br><br>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <h3>Componentes de una expresión booleana</h3><br>
+                  <p class="fst-italic">
+                    Una expresión booleana se compone de términos y operadores booleanos. Según
+                    puede concluirse a partir de lo estudiado en la diversa bibliografía, podrían
+                    obtenerse dos términos primitivos: <br><br>
+                    
+                    1. Término producto: aquel cuyas variables son el resultado de una operación
+                    AND. Por ejemplo, dadas dos variables A ,B cualesquiera, un término
+                    producto podría ser AB . <br><br>
+                    
+                    2. Término suma: aquel cuyas variables son el resultado de una operación
+                    OR. Por ejemplo, dadas dos variables A ,B cualesquiera, un término
+                    suma sería A+B . <br><br>
+
+                    En los términos, las variables pueden aparecer complementadas o no
+                    complementadas, indistintamente, pero solo deben aparecer una vez, ya que
+                    previamente, las expresiones debieron ser reducidas.
+                  </p>
+                </div>
+              </div>
+      
+            </div>
+          </section><!-- End About Section -->
+          
+    <!-- ======= Forma canonica Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                <img src="{% static 'img/tema2/canonica.jpg' %}" class="img-fluid" alt=""> <br><br>
+                <img src="{% static 'img/tema2/max_min.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h3>Forma canónica</h3><br>
+                <p class="fst-italic">
+                    Cuando un término contiene el total de las variables de una función, se los
+                    denomina minitérmino o maxitérmino.Cualquier función Booleana se puede
+                    expresar como suma de miniterminos
+                    (minterms) o como producto de maxiterminos (maxterms) y a estas formas se les dice
+                    que están en forma estándar o canónica (el conjunto completo de variables del
+                    dominio está representado en cada término ).
+                </p>
+                <h4>Mintérmino</h4>
+                <p class="fst-italic">
+                Para una función booleana de n variables x1,....xn , un producto booleano en el que cada una de las n variables
+                aparece una sola vez (negada o sin negar) es llamado minitérmino. Es decir, un minitérmino es una expresión lógica
+                de n variables consistente únicamente en el operador conjunción lógica (AND) y el operador complemento o negación (NOT). <br><br>
+
+                Por ejemplo, a.b.c, a.b'.c y a.b.c' son ejemplos de minterms para una función booleana con las tres variables a, b y c.
+                </p>
+                <h4>Maxtérmino</h4>
+                <p class="fst-italic">
+                    Un maxitérmino es una expresión lógica de n variables que consiste únicamente en la disyunción lógica y el operador complemento
+                    o negación. Los maxterms son una expresión dual de los minitérminos. En vez de usar operaciones AND utilizamos operaciones OR y
+                    procedemos de forma similar. <br><br>
+
+                    Por ejemplo, los siguientes términos canónicos son maxitérminos:
+                    </p>
+                </div>
+            </div>
+
+            </div>
+        </section><!-- End About Section -->
+            
+
+          
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Tutoriales</h2>
+          <p>Material de apoyo externo</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/CjX8q8lXWdg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/aTszjom1Kh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/uRmJZ-NQmMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/8sUB8mPhd84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <iframe width="360" height="315" src="https://www.youtube.com/embed/3ZTbrJzUpcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+
+{% endblock %}

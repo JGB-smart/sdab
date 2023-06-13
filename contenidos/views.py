@@ -7,3 +7,8 @@ def intro(request):
 def tema1(request):
 
     return render(request,'tema1.html')
+
+
+def tema2(request):
+
+    return render(request,'tema2.html')
