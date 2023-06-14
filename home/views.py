@@ -18,5 +18,11 @@ def home(request):
 
 def about(request):
 
+    
+    cursos = Cursos.objects.count()
+    eventos = Eventos.objects.count()
+    profesores = Profesores.objects.count()
+    estudiantes = User.objects.count()
 
-    return render(request,'about.html')
+
+    return render(request,'about.html',{"cursos":cursos, "eventos":eventos, "profesores":profesores,"estudiantes":estudiantes})
