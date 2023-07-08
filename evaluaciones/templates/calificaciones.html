@@ -1,0 +1,88 @@
+{% extends "home.html"%}
+{% load static %}
+
+
+{% block link %}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
+      
+{% endblock%}
+
+{% block content %}
+
+
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Calificaciones</h2>
+        <p>Ve la lista de tus calificaciones, y está al pendiente de tus avances :)</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+ {% if calificaciones %}
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Evaluación</th>
+                <th>Comentario</th>
+                <th>Documento</th>
+                <th>Calificación</th>
+                <th>Entrega</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for calificacion in calificaciones %}
+                <tr>
+                    <td>{{calificacion.test}}</td>
+                    <td>{{calificacion.mensaje}}</td>
+                    <td><a href="{{calificacion.entrega.url}}" download="" class="">Entrega</a></td>
+                    <td>{{calificacion.calificacion}}</td>
+                    <td>{{calificacion.fecha}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Evaluación</th>
+                <th>Comentario</th>
+                <th>Documento</th>
+                <th>Calificación</th>
+                <th>Entrega</th>
+            </tr>
+        </tfoot>
+    </table>
+
+  </main><!-- End #main -->
+
+ {% else %}
+
+  <h2 class="text-center">No existen Calificaciones</h2>
+ 
+ {% endif %}
+
+
+
+
+
+  
+
+{% endblock %}
+
+{% block js %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+  new DataTable('#example');
+</script>
+
+
+
+
+
+{% endblock%}

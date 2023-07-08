@@ -24,7 +24,7 @@ def evaluacion(request,pk):
 
     if request.method == 'GET':
         test = get_object_or_404(Evaluaciones,id = pk)
-        entrega = Entregas.objects.filter(test_id = pk)
+        entrega = Entregas.objects.filter(test_id = pk).filter(user_id=request.user.id)
 
         if(entrega):
              entregado = True
@@ -74,3 +74,16 @@ def entrega(request,pk):
              else:
 
                     return render(request,'entregaform.html',{'form':form}) 
+             
+def calificaciones(request,pk):
+     
+     if request.method == 'GET':
+
+        calificaciones = Entregas.objects.all().filter(user_id=request.user.id)
+
+        data = {
+             'calificaciones':calificaciones
+        }
+          
+     
+        return render(request,'calificaciones.html',data)             
