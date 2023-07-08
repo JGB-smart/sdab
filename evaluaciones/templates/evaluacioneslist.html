@@ -40,6 +40,35 @@
       <h3>No hay Evaluaciones disponibles...</h3>
     </div>   
     {% endif %}  
+
   </main><!-- End #main -->
+
+
+
+  
+  {% block js %}                                        <!--    Sweet aler cableado, no funciona sin la importación de abajo, no extiende el cdn del home (REPARAR!!!) -->
+
+      
+    {% if messages %}
+        {% for m in messages %}
+            <script>
+                Swal.fire({
+                    "title":"Operación realizada!",
+                    "text": "{{m}}",
+                    "icon":"success"
+                });
+            </script>
+        {% endfor %}
+    {% endif %}    
+
+
+
+
+  {% endblock%}
+
+
+
+    <!-- Sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 {% endblock %}

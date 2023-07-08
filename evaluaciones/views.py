@@ -1,7 +1,10 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import redirect, render,get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from evaluaciones.models import Evaluaciones,Entregas
+
+from evaluaciones.forms import EntregaTestForm
 
 @login_required
 def evaluaciones(request):
@@ -21,10 +24,53 @@ def evaluacion(request,pk):
 
     if request.method == 'GET':
         test = get_object_or_404(Evaluaciones,id = pk)
+        entrega = Entregas.objects.filter(test_id = pk)
+
+        if(entrega):
+             entregado = True
+        else:
+             entregado = False     
 
         data = {
-            'evaluacion' : test
+            'evaluacion' : test,
+            'id':pk,
+            'entregado': entrega
         }
 
 
         return render(request,'evaluacion.html',data)
+    
+def entrega(request,pk):
+        
+        form = EntregaTestForm()
+
+        data = {
+             'form' : form,
+             'id':pk
+        }
+
+        if request.method == 'GET':
+             
+
+            return render(request,'entregaform.html',data)
+        
+        elif request.method == 'POST':
+             
+             form = EntregaTestForm(request.POST, request.FILES)
+            #  datos = request.POST
+            #  documento = request.FILES['entrega']
+            #  print(datos)
+            #  print(documento)    
+
+             if form.is_valid():
+
+                post = form.save(commit = False)
+                post.test_id = pk
+                post.user_id = request.user.id
+                post.save()
+
+                messages.success(request,"Evaluación Enviada!")
+                return redirect('evaluaciones')
+             else:
+
+                    return render(request,'entregaform.html',{'form':form}) 

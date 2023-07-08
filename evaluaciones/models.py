@@ -24,13 +24,13 @@ class Evaluaciones(models.Model):
 class Entregas(models.Model):
     test = models.ForeignKey(Evaluaciones, on_delete= models.CASCADE, related_name='evaluacion')
     entrega = models.FileField(upload_to='files/')
-    mensaje = models.CharField(max_length=150)
+    mensaje = models.CharField(max_length=255)
     user = models.ForeignKey(User,on_delete=models.CASCADE, related_name='estudiante')
-    puntaje = models.IntegerField()
+    calificacion = models.IntegerField(null= True, blank=True)
     fecha = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return "Evaluación: " + str(self.user) + " " + "Alumno:" + str(self.user)
+        return  str(self.test) + " / " + "Alumno:" + str(self.user)
     
     class Meta:
         verbose_name = 'Entrega'

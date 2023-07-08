@@ -9,7 +9,7 @@
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
         <h2>Evaluaciones</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <p>Entrega tú evaluación a tiempo, y espera por tú calificación ;)</p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -31,13 +31,15 @@
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"><a href="">{{evaluacion.titulo}}</a></h5>
-                          <p class="fst-italic text-center">{{evaluacion.fecha_final}}</p>
+                          <p class="fst-italic text-center"><b>Final: </b>{{evaluacion.fecha_final}}</p>
                           <p class="card-text">{{evaluacion.descripcion}} </p>
                           <div class="d-flex justify-content-between">
                                 {% if evaluacion.documento.url is not None or evaluacion.documento.url is True %}
                                     <a href="{{evaluacion.documento.url}}" download="" class="">Descargar Evaluacion</a>
                                 {% endif %}
-                                <a href="" class="btn btn-success">Entregar</a>
+                                {% if not entregado %}
+                                  <a href="{% url 'entrega' id%}" class="btn btn-success">Entregar</a>
+                                {% endif %}  
                           </div>
                         </div>
                       </div>
